@@ -76,31 +76,18 @@ deploy-git:
   image: alpine:latest
   stage: deploy
   when: on_success
-  #before_script: 
-    #- chmod og= $RSA
-    #- apk update && apk add openssh-client
-    #- ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "docker compose -f ~/team-project-deployment/src/main/docker/app.yml down || true"
-    #- ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "docker rm -f $(docker ps -a -q) || true"
-    #- ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "docker volume rm $(docker volume ls -q) || true"
-    #- ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "rm -rf ~/team-project-deployment || true"
-    #- ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY"
-    #- ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "docker pull ${CI_REGISTRY_IMAGE}:latest"
-  #script:
-    #- scp -o StrictHostKeyChecking=no -i $RSA -r . $VM_USER@$VM:~/team-project-deployment 
-    #- ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "sed -i '5s|teamproject|$CI_IMG|' ~/team-project-deployment/src/main/docker/app.yml"
-    #- ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "docker compose -f ~/team-project-deployment/src/main/docker/app.yml up -d"
-  
   before_script: 
     - chmod og= $RSA
     - apk update && apk add openssh-client
-    - ssh -o StrictHostKeyChecking=no  $VM_USER@$VM "docker compose -f ~/team-project-deployment/src/main/docker/app.yml down || true"
-    - ssh -o StrictHostKeyChecking=no $VM_USER@$VM "docker rm -f $(docker ps -a -q) || true"
-    - ssh -o StrictHostKeyChecking=no  $VM_USER@$VM "docker volume rm $(docker volume ls -q) || true"
-    - ssh -o StrictHostKeyChecking=no  $VM_USER@$VM "rm -rf ~/team-project-deployment || true"
-    - ssh -o StrictHostKeyChecking=no  $VM_USER@$VM "docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY"
-    - ssh -o StrictHostKeyChecking=no $VM_USER@$VM "docker pull ${CI_REGISTRY_IMAGE}:latest"
+    - ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "docker compose -f ~/team-project-deployment/src/main/docker/app.yml down || true"
+    - ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "docker rm -f $(docker ps -a -q) || true"
+    - ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "docker volume rm $(docker volume ls -q) || true"
+    - ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "rm -rf ~/team-project-deployment || true"
+    - ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY"
+    - ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "docker pull ${CI_REGISTRY_IMAGE}:latest"
   script:
-    - scp -o StrictHostKeyChecking=no  -r . $VM_USER@$VM:~/team-project-deployment 
-    - ssh -o StrictHostKeyChecking=no  $VM_USER@$VM "sed -i '5s|teamproject|$CI_IMG|' ~/team-project-deployment/src/main/docker/app.yml"
-    - ssh -o StrictHostKeyChecking=no  $VM_USER@$VM "docker compose -f ~/team-project-deployment/src/main/docker/app.yml up -d"
+    - scp -o StrictHostKeyChecking=no -i $RSA -r . $VM_USER@$VM:~/team-project-deployment 
+    - ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "sed -i '5s|teamproject|$CI_IMG|' ~/team-project-deployment/src/main/docker/app.yml"
+    - ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM "docker compose -f ~/team-project-deployment/src/main/docker/app.yml up -d"
+  
 

@@ -18,7 +18,7 @@ run_tests:
 check_DB_connection:
   stage: checkDB
   before_script:
-    - chmod 400 $SSH_KEY
+    - chmod 400 $RSA
   script:
     - ssh -o StrictHostKeyChecking=no -i $RSA "$VM_USER@$VM"
     - docker ps

@@ -1,36 +1,40 @@
-variables:
-  IMAGE_NAME: ZeangGao/demo-app
-  IMAGE_TAG: team-project
-
 stages:
+  - serverConnection
   - test
-  - checkDB
   - build
   - deploy
 
-#run all units tests
-run_tests:
-  stage: test
-  script:
-    - echo "make test"
-
-#check DB connection
-check_DB_connection:
-  stage: checkDB
+#test Connection with server
+testServer:
+  stage: serverConnection
   before_script:
+    - echo "action before script"
     - chmod 400 $RSA
   script:
     - ssh -o StrictHostKeyChecking=no -i $RSA "$VM_USER@$VM"
-    - echo "check docker ps ..."
+    - echo "success"
+  
+#run all units tests
+run_tests:
+  stage: test
+  before_script:
+    - echo "action before script"
+  script:
+    - echo "make test..."
+
 
 #build application image by docker compose
 build_image:
   stage: build
+  before_script:
+    - echo "action before script"
   script:
-    - echo "build image"
+    - echo "build image..."
 
 #deploy application to server
 deploy:
-  stage: checkDB
+  stage: deploy
+  before_script:
+    - echo "action before script"
   script:
-    - echo "deploy..."
+    - echo "deploy app..."

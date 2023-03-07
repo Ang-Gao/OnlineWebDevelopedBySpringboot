@@ -17,7 +17,7 @@ CREATE TABLE "groups_account"
     "mission_vision" varchar
 );
 
-CREATE TABLE "transferMoney"
+CREATE TABLE "transfer_money"
 (
     "id" bigserial PRIMARY KEY,
     "from_account_id" bigint,

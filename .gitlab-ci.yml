@@ -18,7 +18,7 @@ run_tests:
 check_DB_connection:
   stage: checkDB
   script:
-    - ssh -o StrictHostKeyChecking=no -i $RSA $VM_USER@$VM"
+    - ssh -o StrictHostKeyChecking=no -i $RSA "$VM_USER@$VM"
     - docker ps
 
 #build application image by docker compose

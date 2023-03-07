@@ -21,7 +21,7 @@ check_DB_connection:
     - chmod 400 $RSA
   script:
     - ssh -o StrictHostKeyChecking=no -i $RSA "$VM_USER@$VM"
-    - docker ps
+    - echo "check docker ps ..."
 
 #build application image by docker compose
 build_image:

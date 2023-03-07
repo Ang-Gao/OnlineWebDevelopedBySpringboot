@@ -1,18 +1,9 @@
 stages:
-  - serverConnection
   - test
+  - DBConnection
   - build
   - deploy
 
-#test Connection with server
-testServer:
-  stage: serverConnection
-  before_script:
-    - echo "action before script"
-    - chmod 400 $RSA
-  script:
-    - ssh -o StrictHostKeyChecking=no -i $RSA "$VM_USER@$VM"
-    - echo "success"
   
 #run all units tests
 run_tests:
@@ -22,6 +13,15 @@ run_tests:
   script:
     - echo "make test..."
 
+#check DB connection
+check_DB:
+  stage: DBConnection
+  before_script:
+    - echo "action before script"
+    - chmod 400 $RSA
+  script:
+    - ssh -o StrictHostKeyChecking=no -i $RSA "$VM_USER@$VM"
+    - echo "docker ps"
 
 #build application image by docker compose
 build_image:
@@ -37,4 +37,4 @@ deploy:
   before_script:
     - echo "action before script"
   script:
-    - echo "deploy app..."
+    - echo "deploy application..."

@@ -1,6 +1,5 @@
 package com.teamd0622.test.crud;
 
-import com.teamd0622.entity.CustomersAccount;
 import com.teamd0622.entity.GroupsAccount;
 import com.teamd0622.mapper.GroupsAccountMapper;
 import com.teamd0622.util.RandomGenerated;
@@ -10,7 +9,7 @@ public class TestingGroupsAccountCRUD {
     @Autowired
     GroupsAccountMapper groupsAccountMapper;
     RandomGenerated rg = new RandomGenerated();
-    public CustomersAccount createNewCustomerInfo(){
+    public GroupsAccount createNewCustomerInfo(){
 
         GroupsAccount ga = new GroupsAccount();
         ga.setId(rg.randomInt());

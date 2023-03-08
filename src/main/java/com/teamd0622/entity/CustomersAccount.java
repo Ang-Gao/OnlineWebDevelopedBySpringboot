@@ -8,5 +8,5 @@ public class CustomersAccount {
     private String owner;
     private Integer balance;
     private String currency;
-    private Integer created_at;
+    private String created_at;
 }

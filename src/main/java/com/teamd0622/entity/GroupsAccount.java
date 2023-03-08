@@ -9,5 +9,5 @@ public class GroupsAccount {
     private Integer balance;
     private String currency;
     private String mission_vision;
-    private Integer created_at;
+    private String created_at;
 }

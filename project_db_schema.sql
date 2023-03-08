@@ -13,8 +13,8 @@ CREATE TABLE "groups_account"
     "owner"          varchar NOT NULL,
     "balance"        bigint  NOT NULL,
     "currency"       varchar NOT NULL,
-    "created_at" timestamptz NOT NULL DEFAULT (now()),
-    "mission_vision" varchar
+    "mission_vision" varchar,
+    "created_at" timestamptz NOT NULL DEFAULT (now())
 );
 
 CREATE TABLE "transfer_money"

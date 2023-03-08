@@ -10,7 +10,7 @@
         DELETE FROM user_details WHERE id=#{id}
     </delete>
     <update id="updateUserDetails" parameterType="com.teamd0622.entity.UserDetails">
-        UPDATE user_details set id=#{id},username=#{username}, age=#{age},email=#{email},address=#{address},userPassword=#{user_password} WHERE id=#{id}
+        UPDATE user_details set id=#{id},username=#{username}, age=#{age},email=#{email},address=#{address},user_password=#{user_password} WHERE id=#{id}
     </update>
     <select id="getUserDetailsById" parameterType="int" resultType="com.teamd0622.entity.UserDetails">
         SELECT * FROM user_details WHERE id=#{id}

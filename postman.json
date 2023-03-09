@@ -1,0 +1,543 @@
+{
+  "info": {
+    "_postman_id": "57f13fc3-0530-4b0e-a4bc-090de6079f50",
+    "name": "TP",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "20479499"
+  },
+  "item": [
+    {
+      "name": "/test/UserDetails",
+      "item": [
+        {
+          "name": "/test/addUserDetailsTesting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/addUserDetailsTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "addUserDetailsTesting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/getUserDetailsByIdTesting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/getUserDetailsByIdTesting/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "getUserDetailsByIdTesting",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/getUserDetailsByIdTesting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/getUserDetailsByIdTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "getUserDetailsByIdTesting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/updateUserDetailsTesting",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/updateUserDetailsTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "updateUserDetailsTesting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/deleteUserDetailsByIdTesting",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/deleteUserDetailsByIdTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "deleteUserDetailsByIdTesting"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/test/CustomersAccount",
+      "item": [
+        {
+          "name": "/test/addCustomersAccountTesting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/addCustomersAccountTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "addCustomersAccountTesting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/updateCustomersAccountTesting",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/updateCustomersAccountTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "updateCustomersAccountTesting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/deleteCustomersAccountByIdTesting/",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/deleteCustomersAccountByIdTesting/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "deleteCustomersAccountByIdTesting",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/getCustomersAccountByIdTesting/",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/getCustomersAccountByIdTesting/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "getCustomersAccountByIdTesting",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/getCustomersAccountByIdTesting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/getCustomersAccountByIdTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "getCustomersAccountByIdTesting"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/test/GroupsAccount",
+      "item": [
+        {
+          "name": "/test/addGroupsAccountTesting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/addGroupsAccountTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "addGroupsAccountTesting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/updateGroupsAccountTesting",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/updateGroupsAccountTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "updateGroupsAccountTesting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/deleteGroupsAccountByIdTesting",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/deleteGroupsAccountByIdTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "deleteGroupsAccountByIdTesting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/getGroupsAccountByIdTesting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/getGroupsAccountByIdTesting/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "getGroupsAccountByIdTesting",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/getGroupsAccountByIdTesting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/getGroupsAccountByIdTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "getGroupsAccountByIdTesting"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/test/DonatedEntities",
+      "item": [
+        {
+          "name": "/test/addDonatedEntitiesTesting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/addDonatedEntitiesTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "addDonatedEntitiesTesting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/updateDonatedEntitiesTesting",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/updateDonatedEntitiesTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "updateDonatedEntitiesTesting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/deleteDonatedEntitiesByIdTesting/",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/deleteDonatedEntitiesByIdTesting/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "deleteDonatedEntitiesByIdTesting",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/getDonatedEntitiesByIdTesting/",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/getDonatedEntitiesByIdTesting/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "getDonatedEntitiesByIdTesting",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/getAllDonatedEntitiesTesting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/getAllDonatedEntitiesTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "getAllDonatedEntitiesTesting"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/test/TransferMoney",
+      "item": [
+        {
+          "name": "/test/addTransferMoneyTesting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/addTransferMoneyTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "addTransferMoneyTesting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/updateTransferMoneyTesting",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/updateTransferMoneyTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "updateTransferMoneyTesting"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/deleteTransferMoneyByIdTesting/",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/deleteTransferMoneyByIdTesting/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "deleteTransferMoneyByIdTesting",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/getTransferMoneyByIdTesting/",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/getTransferMoneyByIdTesting/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "getTransferMoneyByIdTesting",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/getAllTransferMoneyTesting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/getAllTransferMoneyTesting",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "getAllTransferMoneyTesting"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

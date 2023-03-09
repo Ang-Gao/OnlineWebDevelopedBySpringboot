@@ -1,7 +1,6 @@
 package com.teamd0622.test.crud;
 
-import com.teamd0622.entity.CustomersAccount;
-import com.teamd0622.entity.UserDetails;
+import com.teamd0622.model.entity.CustomersAccount;
 import com.teamd0622.mapper.CustomersAccountMapper;
 import com.teamd0622.util.RandomGenerated;
 import org.springframework.beans.factory.annotation.Autowired;

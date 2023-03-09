@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teamd0622.mapper.DonatedEntitiesMapper">
+    <insert id="addDonatedEntity" parameterType="com.teamd0622.model.entity.DonatedEntities">
+        INSERT INTO donated_entities(id, from_account_id, delivery_status) VALUES (#{id},#{from_account_id},#{delivery_status})
+    </insert>
+    <delete id="deleteDonatedEntityById" parameterType="int">
+        DELETE FROM donated_entities WHERE id=#{id}
+    </delete>
+    <update id="updateDonatedEntity" parameterType="com.teamd0622.model.entity.DonatedEntities">
+        UPDATE donated_entities set id=#{id},from_account_id=#{from_account_id}, delivery_status=#{delivery_status} WHERE id=#{id}
+    </update>
+    <select id="getDonatedEntitiesById" parameterType="int" resultType="com.teamd0622.model.entity.DonatedEntities">
+        SELECT * FROM donated_entities WHERE id=#{id}
+    </select>
+    <select id="getAllDonatedEntities" resultType="com.teamd0622.model.entity.DonatedEntities">
+        SELECT * FROM donated_entities
+    </select>
+
+
+
+</mapper>

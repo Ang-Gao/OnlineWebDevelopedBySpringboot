@@ -3,19 +3,19 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.teamd0622.mapper.UserDetailsMapper">
-    <insert id="addUserDetails" parameterType="com.teamd0622.entity.UserDetails">
+    <insert id="addUserDetails" parameterType="com.teamd0622.model.entity.UserDetails">
         INSERT INTO user_details(id, username, age, email, address, user_password) VALUES (#{id},#{username},#{age},#{email},#{address},#{user_password})
     </insert>
     <delete id="deleteUserDetailsById" parameterType="int">
         DELETE FROM user_details WHERE id=#{id}
     </delete>
-    <update id="updateUserDetails" parameterType="com.teamd0622.entity.UserDetails">
+    <update id="updateUserDetails" parameterType="com.teamd0622.model.entity.UserDetails">
         UPDATE user_details set id=#{id},username=#{username}, age=#{age},email=#{email},address=#{address},user_password=#{user_password} WHERE id=#{id}
     </update>
-    <select id="getUserDetailsById" parameterType="int" resultType="com.teamd0622.entity.UserDetails">
+    <select id="getUserDetailsById" parameterType="int" resultType="com.teamd0622.model.entity.UserDetails">
         SELECT * FROM user_details WHERE id=#{id}
     </select>
-    <select id="getAllUsers" resultType="com.teamd0622.entity.UserDetails">
+    <select id="getAllUsers" resultType="com.teamd0622.model.entity.UserDetails">
         SELECT * FROM user_details
     </select>
 </mapper>

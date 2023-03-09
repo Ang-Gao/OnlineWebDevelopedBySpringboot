@@ -1,10 +1,11 @@
 package com.teamd0622.mapper;
 
-import com.teamd0622.entity.UserDetails;
+import com.teamd0622.model.entity.UserDetails;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
+// TODO: 09/03/2023 IF customer account(customer ID -> UserDetails ID) doesn't exist, cannot create User details.
 @Mapper
 public interface UserDetailsMapper {
     int addUserDetails(UserDetails userDetails);

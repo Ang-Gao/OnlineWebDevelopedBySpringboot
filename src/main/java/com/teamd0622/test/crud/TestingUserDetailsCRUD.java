@@ -1,6 +1,6 @@
 package com.teamd0622.test.crud;
 
-import com.teamd0622.entity.UserDetails;
+import com.teamd0622.model.entity.UserDetails;
 import com.teamd0622.mapper.UserDetailsMapper;
 import com.teamd0622.util.RandomGenerated;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +17,9 @@ public class TestingUserDetailsCRUD {
     //create New user info randomly.
     public UserDetails createNewUserInfo(){
         UserDetails user = new UserDetails();
-        user.setId(1);
+        user.setId(rg.randomInt());
         user.setUsername(rg.randomString(10));
-        user.setAge(1);
+        user.setAge(rg.randomInt());
         user.setEmail(rg.randomEmailAddress());
         user.setAddress(rg.randomString(10));
         user.setUser_password(rg.randomString(10));

@@ -1,7 +1,6 @@
 package com.teamd0622.mapper;
 
-import com.teamd0622.entity.CustomersAccount;
-import com.teamd0622.entity.UserDetails;
+import com.teamd0622.model.entity.CustomersAccount;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

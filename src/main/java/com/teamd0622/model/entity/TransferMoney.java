@@ -1,4 +1,4 @@
-package com.teamd0622.entity;
+package com.teamd0622.model.entity;
 
 import lombok.Data;
 
@@ -8,5 +8,5 @@ public class TransferMoney {
     private Integer from_account_id;
     private Integer to_account_id;
     private Integer amount;
-    private Integer created_at;
+    private String created_at;
 }

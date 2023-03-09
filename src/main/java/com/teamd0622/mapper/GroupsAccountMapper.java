@@ -1,6 +1,6 @@
 package com.teamd0622.mapper;
 
-import com.teamd0622.entity.GroupsAccount;
+import com.teamd0622.model.entity.GroupsAccount;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

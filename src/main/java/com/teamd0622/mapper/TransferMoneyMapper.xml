@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.teamd0622.mapper.TransferMoneyMapper">
+    <insert id="addTransferMoney" parameterType="com.teamd0622.model.entity.TransferMoney">
+        INSERT INTO transfer_money(id, from_account_id, to_account_id, amount) VALUES (#{id},#{from_account_id},#{to_account_id},#{amount})
+    </insert>
+    <delete id="deleteTransferMoneyById" parameterType="int">
+        DELETE FROM transfer_money WHERE id=#{id}
+    </delete>
+    <update id="updateTransferMoney" parameterType="com.teamd0622.model.entity.TransferMoney">
+        UPDATE transfer_money set id=#{id},from_account_id=#{from_account_id}, to_account_id=#{to_account_id}, amount=#{amount} WHERE id=#{id}
+    </update>
+    <select id="getTransferMoneyById" parameterType="int" resultType="com.teamd0622.model.entity.TransferMoney">
+        SELECT * FROM transfer_money WHERE id=#{id}
+    </select>
+    <select id="getAllTransferMoney" resultType="com.teamd0622.model.entity.TransferMoney">
+        SELECT * FROM transfer_money
+    </select>
+
+
+
+</mapper>

@@ -3,19 +3,19 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.teamd0622.mapper.GroupsAccountMapper">
-    <insert id="addGroupsAccount" parameterType="com.teamd0622.entity.GroupsAccount">
+    <insert id="addGroupsAccount" parameterType="com.teamd0622.model.entity.GroupsAccount">
         INSERT INTO groups_account(id, owner, balance, currency, mission_vision) VALUES (#{id},#{owner},#{balance},#{currency},#{mission_vision})
     </insert>
     <delete id="deleteGroupsAccountById" parameterType="int">
         DELETE FROM groups_account WHERE id=#{id}
     </delete>
-    <update id="updateGroupsAccount" parameterType="com.teamd0622.entity.GroupsAccount">
+    <update id="updateGroupsAccount" parameterType="com.teamd0622.model.entity.GroupsAccount">
         UPDATE groups_account set id=#{id},owner=#{owner}, balance=#{balance},currency=#{currency},mission_vision=#{mission_vision} WHERE id=#{id}
     </update>
-    <select id="getGroupsAccountById" parameterType="int" resultType="com.teamd0622.entity.GroupsAccount">
+    <select id="getGroupsAccountById" parameterType="int" resultType="com.teamd0622.model.entity.GroupsAccount">
         SELECT * FROM groups_account WHERE id=#{id}
     </select>
-    <select id="getAllGroupsAccount" resultType="com.teamd0622.entity.GroupsAccount">
+    <select id="getAllGroupsAccount" resultType="com.teamd0622.model.entity.GroupsAccount">
         SELECT * FROM groups_account
     </select>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> DonateWeb </title>
+    <title>DonateWeb </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -71,7 +71,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a th:href="@{index}"><img th:src="@{/assets/img/logo/logo.png}" alt="" style="width: 150px"></a>
+                                    <a th:href="@{/index}"><img th:src="@{/assets/img/logo/logo.png}" alt="" style="width: 150px"></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -84,13 +84,13 @@
                                                 <li><a th:href="@{/index}">Mission & Vision</a></li>
                                                 <li><a th:href="@{/index}">Logistics</a></li>
                                                 <li><a th:href="@{/faq}">FAQs </a></li>
-                                                <li><a th:href="@{/profile}">Profile</a></li>
+                                                <li><a th:href="@{/profile/1}">Profile</a></li>
                                             </ul>
                                         </nav>
                                     </div>
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="contact.html" class="btn header-btn">Donate</a>
+                                        <a th:href="@{/index}" class="btn header-btn">Donate</a>
                                     </div>
                                 </div>
                             </div> 
@@ -217,8 +217,6 @@
 
                                             <button type="submit" class="btn btn-primary " >Submit</button>
 
-
-                                            <button  type="submit" class="btn btn-info ">Cancel</button>
                                         </form>
 
                                     </li>
@@ -298,7 +296,7 @@
                             <div class="single-footer-caption mb-30">
                                 <div class="footer-tittle">
                                     <div class="footer-logo mb-20">
-                                        <a href="index.html"><img th:src="@{/assets/img/logo/logo.png}" alt=""></a>
+                                        <a th:href="@{/index}"><img th:src="@{/assets/img/logo/logo.png}" alt=""></a>
                                     </div>
                                 </div>
                             </div>

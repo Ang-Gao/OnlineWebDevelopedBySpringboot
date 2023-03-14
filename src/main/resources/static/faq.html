@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> DonateWeb</title>
+    <title>DonateWeb</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="">
+                    <img th:src="@{assets/img/logo/logo.png}" alt="">
                 </div>
             </div>
         </div>
@@ -54,7 +54,6 @@
                                             <div class="select-itms">
                                                 <select name="select" id="select1">
                                                     <option value="">English</option>
-
                                                 </select>
                                             </div>
                                         </form>
@@ -70,7 +69,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a th:href="@{index}"><img src="assets/img/logo/logo.png" alt="" style="width: 150px"></a>
+                                    <a th:href="@{/index}"><img src="assets/img/logo/logo.png" alt="" style="width: 150px"></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -89,7 +88,7 @@
                                     </div>
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="contact.html" class="btn header-btn">Donate</a>
+                                        <a th:href="@{/index}" class="btn header-btn">Donate</a>
                                     </div>
                                 </div>
                             </div> 
@@ -347,7 +346,7 @@
                                 <!-- Form -->
                                 <div class="footer-form" >
                                     <div id="mc_embed_signup">
-                                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                        <form target="_blank" action="https://www.google.com"
                                         method="get" class="subscribe_form relative mail_part">
                                             <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
                                             class="placeholder hide-on-focus" onfocus="this.placeholder = ''"

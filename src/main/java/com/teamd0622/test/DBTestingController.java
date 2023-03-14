@@ -1,8 +1,12 @@
 package com.teamd0622.test;
 
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
-@RestController
+@Controller
 public class DBTestingController {
-
+    @GetMapping("/events")
+    public String testPage(){
+        return "events";
+    }
 }

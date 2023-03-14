@@ -1,39 +1,39 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="zxx" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> DonateWeb</title>
+    <title> DonateWeb </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/hamburgers.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" th:href="@{/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/slicknav.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/animate.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/hamburgers.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/magnific-popup.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/fontawesome-all.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/themify-icons.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/themify-icons.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/slick.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/nice-select.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/style.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/responsive.css}">
 </head>
 <body>
     <!--? Preloader Start -->
-    <div id="preloader-active">
+    <!--<div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="">
+                    <img th:src="@{/assets/img/logo/logo.png}" alt="">
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Preloader Start -->
     <header>
         <!-- Header Start -->
@@ -55,7 +55,7 @@
                                             <div class="select-itms">
                                                 <select name="select" id="select1">
                                                     <option value="">English</option>
-                                                    <option value="">Arabic</option>
+                                                    <!--option value="">Arabic</option-->
                                                 </select>
                                             </div>
                                         </form>
@@ -71,7 +71,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt="" style="width: 150px"></a>
+                                    <a th:href="@{index}"><img th:src="@{/assets/img/logo/logo.png}" alt="" style="width: 150px"></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -80,11 +80,11 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">                                                                                          
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="about.html">Mission & Vision</a></li>
-                                                <li><a href="program.html">Logistics</a></li>
-                                                <li><a href="events.html">FAQs </a></li>
-                                                <li><a href="contact.html">Profile</a></li>
+                                                <li><a th:href="@{/index}">Home</a></li>
+                                                <li><a th:href="@{/index}">Mission & Vision</a></li>
+                                                <li><a th:href="@{/index}">Logistics</a></li>
+                                                <li><a th:href="@{/faq}">FAQs </a></li>
+                                                <li><a th:href="@{/profile}">Profile</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -129,7 +129,7 @@
                         <div class="blog_left_sidebar">
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" style="width: 400px;" alt="">
+                                    <img class="card-img rounded-0" th:src="@{/assets/img/blog/single_blog_1.png}" style="width: 400px;" alt="">
                                     <a href="#" class="blog_item_date">
                                         <h3>Your</h3>
                                         <p>Profile</p>
@@ -139,14 +139,24 @@
                                     <a class="d-inline-block" href="#">
                                         <h2 class="blog-head" style="color: #2d2d2d;">User Details</h2>
                                     </a>
-                                    <p><b>Username:</b> ABC001 <br> <b>Age: 20</b> <br> <b>Email:</b> abc@donateweb.com <br> <b>Address:</b> University of Birmingham Dubai <br> <b>Password:</b> ******** <br></p>
+                                    <ul th:object="${user}">
+                                        <li><b>User ID: </b><span th:text="${user.id}"></span></li>
+                                        <br>
+                                        <li><b>Username: </b><span th:text="${user.username}"></span></li>
+                                        <br>
+                                        <li><b>Your Age: </b><span th:text="${user.age}"></span></li>
+                                        <br>
+                                        <li><b>Your Email: </b><span th:text="${user.email}"></span></li>
+                                        <br>
+                                        <li><b>Your Address: </b><span th:text="${user.address}"></span></li>
+                                    </ul>
                                 </div>
                             </article>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
-                            <aside class="single_sidebar_widget search_widget">
+                            <!--<aside class="single_sidebar_widget search_widget">
                                 <form action="#">
                                     <div class="form-group">
                                         <div class="input-group mb-3">
@@ -161,14 +171,56 @@
                                     <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
                                         type="submit">Search</button>
                                 </form>
-                            </aside>
+                            </aside>-->
                             <aside class="single_sidebar_widget post_category_widget">
-                                <h4 class="widget_title" style="color: #2d2d2d;">User Options</h4>
+                                <h3 class="widget_title" style="color: #2d2d2d;">User Options</h3>
                                 <ul class="list cat-list">
                                     <li>
                                         <a href="#" class="d-flex">
-                                            <p>Update Profile Info</p>
+                                            <h3>Update Profile Info</h3>
                                         </a>
+
+                                        <form th:action="@{/profile}" method="post">
+                                            <b><i>Form cannot be empty</i></b>
+                                            <div class="form-group">
+                                                <!--th:for label点击指向对应名称的元素-->
+                                                <label th:for="id">ID</label>
+                                                <input type="text" class="form-control" th:id="id" name="id" th:value="${user.id}" readonly>
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <!--th:for label点击指向对应名称的元素-->
+                                                <label th:for="username">username</label>
+                                                <input type="text" class="form-control" th:id="username" name="username"  placeholder="please enter username">
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <label th:for="age">age (number)</label>
+                                                <input type="text" class="form-control" th:id="age" name="age"  placeholder="please enter age">
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <label th:for="email">email</label>
+                                                <input type="text" class="form-control" th:id="email" name="email"  placeholder="please enter email">
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <label th:for="address">address</label>
+                                                <input type="text" class="form-control" th:id="address" name="address"  placeholder="please enter address">
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <label th:for="user_password">password</label>
+                                                <input type="password" class="form-control" th:id="user_password" name="user_password" placeholder="please enter password">
+                                            </div>
+                                            <br>
+
+                                            <button type="submit" class="btn btn-primary " >Submit</button>
+
+
+                                            <button  type="submit" class="btn btn-info ">Cancel</button>
+                                        </form>
+
                                     </li>
                                     <li>
                                         <a href="#" class="d-flex">
@@ -182,7 +234,7 @@
                                     </li>
                                     <li>
                                         <a href="#" class="d-flex">
-                                            <p>Change Password</p>
+                                            <p>Forget Password?</p>
                                         </a>
                                     </li>
                                     <li>
@@ -198,32 +250,32 @@
                                 <ul class="instagram_row flex-wrap">
                                     <li>
                                         <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_5.png" alt="">
+                                            <img class="img-fluid" th:src="@{/assets/img/post/post_5.png}" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_6.png" alt="">
+                                            <img class="img-fluid" th:src="@{/assets/img/post/post_6.png}" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_7.png" alt="">
+                                            <img class="img-fluid" th:src="@{/assets/img/post/post_7.png}" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_8.png" alt="">
+                                            <img class="img-fluid" th:src="@{/assets/img/post/post_8.png}" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_9.png" alt="">
+                                            <img class="img-fluid" th:src="@{/assets/img/post/post_9.png}" alt="">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_10.png" alt="">
+                                            <img class="img-fluid" th:src="@{/assets/img/post/post_10.png}" alt="">
                                         </a>
                                     </li>
                                 </ul>
@@ -246,7 +298,7 @@
                             <div class="single-footer-caption mb-30">
                                 <div class="footer-tittle">
                                     <div class="footer-logo mb-20">
-                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                        <a href="index.html"><img th:src="@{/assets/img/logo/logo.png}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -291,14 +343,14 @@
                                 <!-- Form -->
                                 <div class="footer-form" >
                                     <div id="mc_embed_signup">
-                                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                        <form target="_blank" action="https://google.com"
                                         method="get" class="subscribe_form relative mail_part">
                                             <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
                                             class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
                                             onblur="this.placeholder = ' Email Address '">
                                             <div class="form-icon">
                                                 <button type="submit" name="submit" id="newsletter-submit"
-                                                class="email_icon newsletter-submit button-contactForm"><img src="assets/img/gallery/form.png" alt=""></button>
+                                                class="email_icon newsletter-submit button-contactForm"><img th:src="@{assets/img/gallery/form.png}" alt=""></button>
                                             </div>
                                             <div class="mt-10 info"></div>
                                         </form>

@@ -2,18 +2,23 @@ package com.teamd0622.service.impl;
 
 import com.teamd0622.mapper.UserDetailsMapper;
 import com.teamd0622.model.entity.UserDetails;
-import com.teamd0622.service.UpdateUserProfile;
+import com.teamd0622.service.UserProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UpdateUserProfileImpl implements UpdateUserProfile {
+public class UserProfileServiceImpl implements UserProfileService {
     @Autowired
     UserDetailsMapper userDetailsMapper;
 
     @Override
-    public Integer updateUserProfile(Integer id,UserDetails updateDetails) {
+    public Integer updateUserProfile(UserDetails updateDetails) {
         Integer retval = userDetailsMapper.updateUserDetails(updateDetails);
         return retval;
+    }
+
+    @Override
+    public UserDetails getUserProfile(Integer id) {
+        return userDetailsMapper.getUserDetailsById(id);
     }
 }

@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>index</title>
+    <style>
+        #result{
+            width: 200px;
+            height: 200px;
+            border: solid 2px #34ce57;
+        }
+    </style>
 </head>
 <body>
 <h1>Under Developing...</h1>
 <p>Please goto <a href="http://18.191.1.110:8080/profile/1">HERE</a> to browse!
+<div id="result"></div>
 </body>
+<script>
+    let result = document.getElementById("result");
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    result.addEventListener("mouseover",()=>{
+        xhr.open('GET','http://127.0.0.1:8080/ajax');
+        xhr.send();
+        xhr.onreadystatechange = () =>{
+            if (xhr.readyState === 4){
+                if (xhr.status >= 200 && xhr.status < 300){
+                    result.innerHTML = xhr.response.username;
+                }
+            }
+        }
+    })
+</script>
 </html>

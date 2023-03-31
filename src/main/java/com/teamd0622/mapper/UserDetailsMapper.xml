@@ -18,4 +18,7 @@
     <select id="getAllUsers" resultType="com.teamd0622.model.entity.UserDetails">
         SELECT * FROM user_details
     </select>
+    <select id="usernameExist" resultType="int">
+        SELECT 1 FROM user_details WHERE username=#{username} LIMIT 1
+    </select>
 </mapper>

@@ -1,9 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="zxx" xmlns:th="http://www.thymeleaf.org">
+<html class="no-js" lang="zxx">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>DonateWeb</title>
+    <title> DonateWeb</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img th:src="@{assets/img/logo/logo.png}" alt="">
+                    <img src="assets/img/logo/logo.png" alt="">
                 </div>
             </div>
         </div>
@@ -54,6 +54,7 @@
                                             <div class="select-itms">
                                                 <select name="select" id="select1">
                                                     <option value="">English</option>
+                                                    <option value="">Arabic</option>
                                                 </select>
                                             </div>
                                         </form>
@@ -69,7 +70,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a th:href="@{/index}"><img src="assets/img/logo/logo.png" alt="" style="width: 150px"></a>
+                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt="" style="width: 150px"></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -78,24 +79,23 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">                                                                                          
-                                                <li><a th:href="@{/index}">Home</a></li>
-                                                <li><a th:href="@{/index}">Mission & Vision</a></li>
-                                                <li><a th:href="@{/index}">Logistics</a></li>
-                                                <li><a th:href="@{/faq}">FAQs </a></li>
-                                                <li><a th:href="@{/profile/1}">Profile</a></li>
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="mnv.html">Mission & Vision</a></li>
+                                                <li><a href="program.html">Logistics</a></li>
+                                                <li><a href="events.html">FAQs </a></li>
+                                                <li><a href="contact.html">Profile</a></li>
                                             </ul>
                                         </nav>
                                     </div>
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a th:href="@{/index}" class="btn header-btn">Donate</a>
+                                        <a href="contact.html" class="btn header-btn">Donate</a>
                                     </div>
                                 </div>
                             </div> 
                             <!-- Mobile Menu -->
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="hero-cap hero-cap2 pt-20 text-center">
-                            <h1>FAQs</h1>
+                            <h2>Mission & Vision</h2>
                         </div>
                     </div>
                 </div>
@@ -120,6 +120,104 @@
         </div>
     </div>
     <!-- Hero End -->
+    <!--? Services Area Start -->
+    <div class="service-area section-padding30">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-80">
+                        <span>What we are doing</span>
+                        <h2>We Are In A Mission To Help The Helpless</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        <div class="cat-icon">
+                            <span class="flaticon-null-1"></span>
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="contact.html">Donate for a cause</a></h5>
+                            <p>Donate for a cause and help the needy. The donations can be made in several ways. Head over to the donations page to find out more.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cat active text-center mb-50">
+                        <div class="cat-icon">
+                            <span class="flaticon-think"></span>
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="contact.html">Transparent Donations</a></h5>
+                            <p>All the donations made are transparent and the user will be able to get a record of the usage of the donations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        <div class="cat-icon">
+                            <span class="flaticon-gear"></span>
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="contact.html">Multiple Donation Campaigns</a></h5>
+                            <p>DonateWeb hosts multiple donation campaigns every alternative week to help as many people we can. Make sure to check out all of them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services Area End -->
+    <!--? About Law Start-->
+    <section class="about-low-area section-padding2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-10">
+                    <div class="about-caption mb-50">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle mb-35">
+                            <span>About DonateWeb</span>
+                            <h2>We Are In A Mission To Help The Helpless</h2>
+                        </div>
+                        <p>DonateWeb is an online platform through which users can register and make donations to help the helpless.</p>
+                        <p>DonateWeb is a non-profit organization that aims to help the needy.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <!-- about-img -->
+                    <div class="about-img ">
+                        <div class="about-font-img d-none d-lg-block">
+                            <img src="assets/img/gallery/about2.png" alt="">
+                        </div>
+                        <div class="about-back-img ">
+                            <img src="assets/img/gallery/about1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Law End-->
+    <!-- Want To work -->
+    <section class="wantToWork-area ">
+        <div class="container">
+            <div class="wants-wrapper w-padding2  section-bg" data-background="assets/img/gallery/section_bg01.png">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-5 col-lg-9 col-md-8">
+                        <div class="wantToWork-caption wantToWork-caption2">
+                            <h2>Let's help this world become a better place to live.</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4">
+                        <a href="contact.html" class="btn white-btn f-right sm-left">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Want To work End -->
     <!--? Count Down Start -->
     <div class="count-down-area pt-25 section-bg" data-background="assets/img/gallery/section_bg02.png">
         <div class="container">
@@ -148,7 +246,7 @@
                                 <div class="single-counter text-center">
                                     <span class="counter color-green">256</span>
                                     <span class="plus">+</span>
-                                    <p class="color-green">Lives Saved</p>
+                                    <p class="color-green">Donation</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
@@ -156,7 +254,7 @@
                                 <div class="single-counter text-center">
                                     <span class="counter color-green">256</span>
                                     <span class="plus">+</span>
-                                    <p class="color-green">Houses Made</p>
+                                    <p class="color-green">Donation</p>
                                 </div>
                             </div>
                         </div>
@@ -166,134 +264,6 @@
         </div>
     </div>
     <!-- Count Down End -->
-    <!-- Featured_job_start -->
-    <section class="featured-job-area section-padding30 section-bg2" data-background="assets/img/gallery/section_bg03.png">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-7 col-lg-9 col-md-10 col-sm-12">
-                    <!-- Section Tittle -->
-                    <div class="section-tittle text-center mb-80">
-                        <span>FAQs</span>
-                        <h2>Have Questions? Find your answers from the FAQs given below:</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <a href="#"><img src="assets/img/gallery/socialEvents1.png" alt=""></a>
-                            </div>
-                            <div class="job-tittle">
-                                <h4>How to Register? ⬇️</h4>
-                                <ul>
-                                    <li><p>To register, click on the register link</p></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <a href="#"><img src="assets/img/gallery/socialEvents2.png" alt=""></a>
-                            </div>
-                            <div class="job-tittle">
-                                <a href="https://www.google.com/search?q=how+to+help+chirden&oq=how+to+help+chirden&aqs=chrome..69i57j0i13i512l9.4291j0j7&sourceid=chrome&ie=UTF-8"><h4>A hand for Children</h4></a>
-                                <ul>
-                                    <li><i class="fas fa-map-marker-alt"></i>UAE</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-12">
-
-                </div>
-
-                <div class="hero-cap text-center">
-                    <h2>-- The Future --</h2>
-                </div>
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <a href="#"><img src="assets/img/gallery/socialEvents3.png" alt=""></a>
-                            </div>
-                            <div class="job-tittle">
-                                <h4>Our Future</h4>
-                                <ul>
-                                    <li><i class="far fa-clock"></i>8:30am - 9:30am</li>
-                                    <li><i class="fas fa-sort-amount-down"></i>18.09.2023</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Dubai</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <img src="assets/img/gallery/socialEvents1.png" alt="">
-                            </div>
-                            <div class="job-tittle">
-                                <h4>Donation is Hope</h4>
-                                <ul>
-                                    <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
-                                    <li><i class="fas fa-sort-amount-down"></i>18.01.2024</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <img src="assets/img/gallery/socialEvents2.png" alt="">
-                            </div>
-                            <div class="job-tittle">
-                                <h4>"Children"</h4>
-                                <ul>
-                                    <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
-                                    <li><i class="fas fa-sort-amount-down"></i>18.01.2025</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Greece</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <a href="#"><img src="assets/img/gallery/socialEvents3.png" alt=""></a>
-                            </div>
-                            <div class="job-tittle">
-                                <h4>New Hope</h4>
-                                <ul>
-                                    <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
-                                    <li><i class="fas fa-sort-amount-down"></i>18.01.2027</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Featured_job_end -->
     </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
@@ -306,7 +276,7 @@
                             <div class="single-footer-caption mb-30">
                                 <div class="footer-tittle">
                                     <div class="footer-logo mb-20">
-                                        <img src="assets/img/logo/logo.png" alt="">
+                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -320,11 +290,25 @@
                                         <li>
                                             <p>Address :University of Birmingham, Dubai</p>
                                         </li>
-                                        <li>Phone : +971 50 123 4567</li>
-                                        <li><a href="https://outlook.com">Email : info@donateweb.com</a></li>
+                                        <li><a href="#">Phone : +971 50 123 4567</a></li>
+                                        <li><a href="#">Email : info@donateweb.com</a></li>
                                     </ul>
                                 </div>
 
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Important Links</h4>
+                                    <ul>
+                                        <li><a href="#"> Mission & Vision</a></li>
+                                        <li><a href="#">Logistics</a></li>
+                                        <li><a href="#">FAQs</a></li>
+                                        <li><a href="#">Profile</a></li>
+                                        <li><a href="#">Need Help?</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
@@ -337,7 +321,7 @@
                                 <!-- Form -->
                                 <div class="footer-form" >
                                     <div id="mc_embed_signup">
-                                        <form target="_blank" action="https://www.google.com"
+                                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
                                         method="get" class="subscribe_form relative mail_part">
                                             <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
                                             class="placeholder hide-on-focus" onfocus="this.placeholder = ''"

@@ -21,4 +21,15 @@ public class UserProfileServiceImpl implements UserProfileService {
     public UserDetails getUserProfile(Integer id) {
         return userDetailsMapper.getUserDetailsById(id);
     }
+
+    @Override
+    public boolean usernameExist(String username) {
+        try{
+            int callback = userDetailsMapper.usernameExist(username);
+            return callback == 1 ;
+        }catch (Exception ex){
+            return false;
+        }
+        
+    }
 }

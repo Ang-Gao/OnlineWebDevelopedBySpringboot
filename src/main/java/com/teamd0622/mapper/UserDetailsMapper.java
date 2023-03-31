@@ -13,4 +13,6 @@ public interface UserDetailsMapper {
     int deleteUserDetailsById(Integer id);
     UserDetails getUserDetailsById(Integer id);
     List<UserDetails> getAllUsers();
+
+    int usernameExist(String username);
 }

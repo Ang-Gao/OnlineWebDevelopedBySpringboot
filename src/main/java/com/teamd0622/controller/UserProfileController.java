@@ -2,17 +2,12 @@ package com.teamd0622.controller;
 
 import com.teamd0622.model.entity.UserDetails;
 import com.teamd0622.service.UserProfileService;
-import com.teamd0622.service.impl.UserProfileServiceImpl;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-
-import javax.annotation.Resource;
 
 @Controller
 public class UserProfileController {
@@ -27,10 +22,22 @@ public class UserProfileController {
     }
 
     @PostMapping("/profile")
-    public String updateProfileInfo(Integer id,String username,Integer age,String email,String address,String user_password){
-
+    public String updateProfileInfo(Integer id,String username,Integer age,String email,String address,String user_password,Model model){
+        // TODO: 27/03/2023 check username identity(only)  and age whether is number
+        //true --> existed
         UserDetails userDetails_new = new UserDetails();
-        userDetails_new.setId(id);
+        UserDetails old = userProfileService.getUserProfile(id);
+        System.out.println("id is "+id);
+        if(userProfileService.usernameExist(username)){
+            System.out.println("reached!");
+            String username_callback = "Name existed!";
+            model.addAttribute("username_callback",username_callback);
+            model.addAttribute("user",old);
+            System.out.println(username_callback);
+            return "profile";
+        }
+
+
         userDetails_new.setUsername(username);
         userDetails_new.setAge(age);
         userDetails_new.setEmail(email);
@@ -38,5 +45,11 @@ public class UserProfileController {
         userDetails_new.setUser_password(user_password);
         userProfileService.updateUserProfile(userDetails_new);
         return "redirect:/profile/"+id;
+    }
+
+    //data = username
+    @PostMapping("/check/username_exist")
+    public boolean checkUsernameExist(String username){
+        return userProfileService.usernameExist(username);
     }
 }

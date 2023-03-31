@@ -113,7 +113,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap hero-cap2 pt-70 text-center">
-                                <h2>Profile</h2>
+                                <h1>Profile</h1>
                             </div>
                         </div>
                     </div>
@@ -180,37 +180,37 @@
                                             <h3>Update Profile Info</h3>
                                         </a>
 
-                                        <form th:action="@{/profile}" method="post">
+                                        <form th:action="@{/profile}" method="post" id="form">
                                             <b><i>Form cannot be empty</i></b>
                                             <div class="form-group">
                                                 <!--th:for label点击指向对应名称的元素-->
                                                 <label th:for="id">ID</label>
                                                 <input type="text" class="form-control" th:id="id" name="id" th:value="${user.id}" readonly>
                                             </div>
-                                            <br>
+                                            <p th:text="${username_callback}"></p>
                                             <div class="form-group">
                                                 <!--th:for label点击指向对应名称的元素-->
-                                                <label th:for="username">username</label>
+                                                <label th:for="username">Username</label>
                                                 <input type="text" class="form-control" th:id="username" name="username"  placeholder="please enter username">
                                             </div>
                                             <br>
                                             <div class="form-group">
-                                                <label th:for="age">age (number)</label>
+                                                <label th:for="age">Age (number)</label>
                                                 <input type="text" class="form-control" th:id="age" name="age"  placeholder="please enter age">
                                             </div>
                                             <br>
                                             <div class="form-group">
-                                                <label th:for="email">email</label>
+                                                <label th:for="email">Email</label>
                                                 <input type="text" class="form-control" th:id="email" name="email"  placeholder="please enter email">
                                             </div>
                                             <br>
                                             <div class="form-group">
-                                                <label th:for="address">address</label>
+                                                <label th:for="address">Address</label>
                                                 <input type="text" class="form-control" th:id="address" name="address"  placeholder="please enter address">
                                             </div>
                                             <br>
                                             <div class="form-group">
-                                                <label th:for="user_password">password</label>
+                                                <label th:for="user_password">Password</label>
                                                 <input type="password" class="form-control" th:id="user_password" name="user_password" placeholder="please enter password">
                                             </div>
                                             <br>
@@ -221,22 +221,17 @@
 
                                     </li>
                                     <li>
-                                        <a href="#" class="d-flex">
+                                        <a th:href="@{/mygroup}" class="d-flex">
                                             <p>Check my Charity Group</p>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="d-flex">
+                                        <a th:href="@{/history}" class="d-flex">
                                             <p>History</p>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="d-flex">
-                                            <p>Forget Password?</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
+                                        <a th:href="@{/faq}" class="d-flex">
                                             <p>Need Help?</p>
                                         </a>
                                     </li>
@@ -244,37 +239,25 @@
                             </aside>
                             
                             <aside class="single_sidebar_widget instagram_feeds">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Latest Donations Update</h4>
+                                <h4 class="widget_title" style="color: #2d2d2d;">User Style</h4>
                                 <ul class="instagram_row flex-wrap">
                                     <li>
-                                        <a href="#">
                                             <img class="img-fluid" th:src="@{/assets/img/post/post_5.png}" alt="">
-                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#">
                                             <img class="img-fluid" th:src="@{/assets/img/post/post_6.png}" alt="">
-                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#">
                                             <img class="img-fluid" th:src="@{/assets/img/post/post_7.png}" alt="">
-                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#">
                                             <img class="img-fluid" th:src="@{/assets/img/post/post_8.png}" alt="">
-                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#">
                                             <img class="img-fluid" th:src="@{/assets/img/post/post_9.png}" alt="">
-                                        </a>
                                     </li>
                                     <li>
-                                        <a href="#">
                                             <img class="img-fluid" th:src="@{/assets/img/post/post_10.png}" alt="">
-                                        </a>
                                     </li>
                                 </ul>
                             </aside>
@@ -287,6 +270,7 @@
     </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
+            <img class="card-img align-items-center" th:src="@{/assets/img/blog/single_blog_2.png}" style="width: 350px; grid-auto-columns: auto" alt="">
             <!-- Footer Top-->
             <div class="footer-area footer-padding">
                 <div class="container">
@@ -308,29 +292,16 @@
                                     <h4>Contact Info</h4>
                                     <ul>
                                         <li>
-                                            <p>Address :University of Birmingham, Dubai</p>
+                                            <p>Address: University of Birmingham, Dubai</p>
                                         </li>
-                                        <li><a href="#">Phone : +971 50 123 4567</a></li>
-                                        <li><a href="#">Email : info@donateweb.com</a></li>
+                                        <li>Phone : +971 50 123 4567</li>
+                                        <li><a href="https://outlook.com">Email : info@donateweb.com</a></li>
                                     </ul>
                                 </div>
 
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Important Links</h4>
-                                    <ul>
-                                        <li><a href="#"> Mission & Vision</a></li>
-                                        <li><a href="#">Logistics</a></li>
-                                        <li><a href="#">FAQs</a></li>
-                                        <li><a href="#">Profile</a></li>
-                                        <li><a href="#">Need Help?</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
@@ -359,7 +330,7 @@
                         </div>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
     </footer>
     <!-- Scroll Up -->
@@ -406,5 +377,9 @@
       <!-- Jquery Plugins, main Jquery -->	
       <script src="./assets/js/plugins.js"></script>
       <script src="./assets/js/main.js"></script>
+
+
+
     </body>
+
 </html>

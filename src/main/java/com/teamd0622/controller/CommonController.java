@@ -9,8 +9,9 @@ public class CommonController {
     public String faqPage(){
         return "faq";
     }
-    @GetMapping("/index")
-    public String indexPage(){
-        return "index";
+
+    @GetMapping("/4xx")
+    public String errorPage(){
+        return  "4xx";
     }
 }

@@ -21,4 +21,10 @@
     <select id="usernameExist" resultType="int">
         SELECT 1 FROM user_details WHERE username=#{username} LIMIT 1
     </select>
+    <select id="getPwdByUsername" resultType="string">
+        SELECT user_password FROM user_details WHERE username=#{username} LIMIT 1
+    </select>
+    <select id="getUserDetailsByUsername" resultType="com.teamd0622.model.entity.UserDetails">
+        SELECT * FROM user_details WHERE username=#{username} LIMIT 1
+    </select>
 </mapper>

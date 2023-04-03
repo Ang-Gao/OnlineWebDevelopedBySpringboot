@@ -1,6 +1,6 @@
 package com.teamd0622.interception;
 
-import com.teamd0622.model.dto.LoginState;
+import com.teamd0622.model.entity.UserDetails;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -19,8 +19,8 @@ public class LoginInterceptor implements HandlerInterceptor {
         try {
             HttpSession session = request.getSession();
             //统一拦截（查询当前session是否存在user）(这里user会在每次登录成功后，写入session)
-            LoginState login_state = (LoginState) session.getAttribute("login_state");
-            if (login_state != null) {
+            UserDetails ud = (UserDetails) session.getAttribute("ud");
+            if (ud != null) {
                 return true;
             }
             //// TODO: 28/03/2023

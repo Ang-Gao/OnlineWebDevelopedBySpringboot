@@ -1,13 +1,25 @@
 package com.teamd0622.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+
 public class CommonController {
-    @GetMapping("/faq")
-    public String faqPage(){
-        return "faq";
+    @Parameters({
+        @Parameter(name = "request")
+    })
+    @RequestMapping(method = RequestMethod.GET,path = "/faq")
+
+    public ModelAndView faqPage(){
+        return new ModelAndView("faq");
     }
 
     @GetMapping("/4xx")

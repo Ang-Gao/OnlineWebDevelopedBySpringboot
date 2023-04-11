@@ -16,6 +16,11 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("执行了拦截器的preHandle方法");
+        String uri = request.getRequestURI();
+        // 判断是否为Swagger的请求
+        if (uri.startsWith("/swagger") || uri.startsWith("/v2/api-docs") || uri.startsWith("/webjars")) {
+            return true;
+        }
         try {
             HttpSession session = request.getSession();
             //统一拦截（查询当前session是否存在user）(这里user会在每次登录成功后，写入session)
@@ -25,7 +30,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             }
             //// TODO: 28/03/2023
             // 这个路径不确定
-            response.sendRedirect(request.getContextPath() + "login");
+            response.sendRedirect(request.getContextPath() + "/login");
         } catch (Exception e) {
             e.printStackTrace();
         }

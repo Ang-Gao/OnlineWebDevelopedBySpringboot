@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "57f13fc3-0530-4b0e-a4bc-090de6079f50",
-    "name": "TP",
+    "name": "DonateWeb",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "20479499"
   },
@@ -538,6 +538,171 @@
           "response": []
         }
       ]
+    },
+    {
+      "name": "/test/Register",
+      "item": [
+        {
+          "name": "/test/checkExistedUsername",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/checkExistedUsername?username=uname",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "checkExistedUsername"
+              ],
+              "query": [
+                {
+                  "key": "username",
+                  "value": "uname"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "/test/addNewUser",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/test/addNewUser?username=Jason Gao&age=21&email=11@oo.com&address=Abu Dhabi&password=test",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "test",
+                "addNewUser"
+              ],
+              "query": [
+                {
+                  "key": "username",
+                  "value": "Jason Gao"
+                },
+                {
+                  "key": "age",
+                  "value": "21"
+                },
+                {
+                  "key": "email",
+                  "value": "11@oo.com"
+                },
+                {
+                  "key": "address",
+                  "value": "Abu Dhabi"
+                },
+                {
+                  "key": "password",
+                  "value": "test"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "/login",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/faq",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/faq",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "faq"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/index",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/mnv",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/mnv",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "mnv"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/donate",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/donate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "donate"
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }

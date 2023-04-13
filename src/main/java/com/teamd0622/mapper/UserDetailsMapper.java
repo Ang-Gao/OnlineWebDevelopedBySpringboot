@@ -19,4 +19,6 @@ public interface UserDetailsMapper {
     String getPwdByUsername(String username);
 
     UserDetails getUserDetailsByUsername(String username);
+
+    int addNewUser(String username,Integer age,String email,String address,String user_password);
 }

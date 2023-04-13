@@ -27,4 +27,8 @@
     <select id="getUserDetailsByUsername" resultType="com.teamd0622.model.entity.UserDetails">
         SELECT * FROM user_details WHERE username=#{username} LIMIT 1
     </select>
+    <insert id="addNewUser" parameterType="com.teamd0622.model.entity.UserDetails">
+        INSERT INTO user_details(username,age,email,address,user_password) VALUES(#{username},#{age},#{email},#{address},#{user_password});
+    </insert>
 </mapper>
+

@@ -1,8 +1,52 @@
 package com.teamd0622.controller;
 
+import com.teamd0622.model.entity.UserDetails;
+import com.teamd0622.service.UserRegisterService;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class RegisterController {
-    //// TODO: 03/04/2023 实现一个注册功能
+    @Autowired
+    UserRegisterService userRegisterService;
+
+    @GetMapping("/register")
+    public String registerPage(){
+        return "/register";
+    }
+
+    //id 自动生成
+    @PostMapping("/register")
+    public String register(@RequestParam(name = "username")String username,
+                           @RequestParam(name = "age")Integer age,
+                           @RequestParam(name = "email")String email,
+                           @RequestParam(name = "address")String address,
+                           @RequestParam(name = "password")String password,
+                           Model model, HttpServletRequest request){
+        //register logic
+        //if username existed, return ""username existed"" to thymeleaf 回显区域（在username input下面多一行提示）
+        if (userRegisterService.checkUsernameExist(username) == 1){
+            String pagecallback = (String) model.getAttribute("pagecallback");
+            System.out.println(pagecallback);
+            model.addAttribute("Username existed",pagecallback);
+            return "/register";
+        }
+        //success and judge input
+        if(username == null || age == null || email == null || address == null || password == null){
+            String pagecallback = (String) model.getAttribute("pagecallback");
+            System.out.println(pagecallback);
+            model.addAttribute("You CANNOT register with EMPTY ROW(S)",pagecallback);
+            return "/register";
+        }
+        //id 处理问题
+        UserDetails current_user = userRegisterService.createNewUserDetails(username,age,email,address,password);
+        model.addAttribute("ud", current_user);
+        request.getSession().setAttribute("ud", current_user);
+        return "redirect:/index";
+    }
 }

@@ -13,9 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 
 public class CommonController {
-    @Parameters({
-        @Parameter(name = "request")
-    })
+
     @RequestMapping(method = RequestMethod.GET,path = "/faq")
 
     public ModelAndView faqPage(){
@@ -26,4 +24,10 @@ public class CommonController {
     public String errorPage(){
         return  "4xx";
     }
+
+    @GetMapping("/mnv")
+    public String mnvPage(){return "mnv";}
+
+    @GetMapping("/donate")
+    public String donatePage(){return "donate";}
 }

@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS groups_account;
 CREATE TABLE "customers_account"
 (
     "id" bigserial PRIMARY KEY,
@@ -59,5 +60,5 @@ ALTER TABLE "transfer_money"
 ALTER TABLE "transfer_money"
     ADD FOREIGN KEY ("to_account_id") REFERENCES "groups_account" ("id");
 
-ALTER TABLE "user_details"
-    ADD FOREIGN KEY ("id") REFERENCES "customers_account" ("id");
+-- ALTER TABLE "user_details"
+    -- ADD FOREIGN KEY ("id") REFERENCES "customers_account" ("id");

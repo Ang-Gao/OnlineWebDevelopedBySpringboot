@@ -30,4 +30,7 @@ public class CommonController {
 
     @GetMapping("/donate")
     public String donatePage(){return "donate";}
+
+
+
 }

@@ -11,7 +11,7 @@ public class UserRegisterServiceImpl implements UserRegisterService {
     @Autowired
     UserDetailsMapper userDetailsMapper;
     @Override
-    public int checkUsernameExist(String username) {
+    public Integer checkUsernameExist(String username) {
         return userDetailsMapper.usernameExist(username);
     }
 

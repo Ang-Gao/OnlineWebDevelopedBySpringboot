@@ -14,7 +14,7 @@ public interface UserDetailsMapper {
     UserDetails getUserDetailsById(Integer id);
     List<UserDetails> getAllUsers();
 
-    int usernameExist(String username);
+    Integer usernameExist(String username);
 
     String getPwdByUsername(String username);
 

@@ -20,4 +20,6 @@ plan:
 周五，6，7：
 1.API文档整合（Rest和普通的controller到底能不能整合上？不能的话，直接一半一半） -- easy
 2.页面调整引入thymeleaf -- 完成所有功能的体现 （Risk点）
+    -- 1.用户名重复回现问题
+       2.
 3.Transfer的Controller -- easy

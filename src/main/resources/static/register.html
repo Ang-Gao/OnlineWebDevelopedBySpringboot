@@ -255,14 +255,14 @@
           <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10">
               <div class="hero__caption">
-                <form th:action="@{/profile}" method="post" id="form">
-                    <b><i>Form cannot be empty</i></b>
-                    <div class="form-group">
-                        <!--th:for label点击指向对应名称的元素-->
+                <form th:action="@{/register}" method="post" id="form">
+                    <b>Form cannot be EMPTY</b>
+                    <!--<div class="form-group">
+                        &lt;!&ndash;th:for label点击指向对应名称的元素&ndash;&gt;
                         <label th:for="id">ID</label>
-                        <input type="text" class="form-control" th:id="id" name="id" th:value="${user.id}" readonly>
-                    </div>
-                    <p th:text="${username_callback}"></p>
+                        <input type="text" class="form-control" th:id="id" name="id"  readonly>&lt;!&ndash;th:value=""&ndash;&gt;
+                    </div>-->
+                    <p th:text="${pagecallback}"></p>
                     <div class="form-group">
                         <!--th:for label点击指向对应名称的元素-->
                         <label th:for="username">Username</label>
@@ -289,6 +289,17 @@
                         <input type="password" class="form-control" th:id="user_password" name="user_password" placeholder="please enter password">
                     </div>
                     <br>
+                  <div class="form-group">
+                    <select id="age" name="age">
+                      <option value="">Please select your gender</option>
+                      <option value="18">Male</option>
+                      <option value="19-25">Female</option>
+                      <option value="19-25">Wouldn't wanna talk :)</option>
+                    </select>
+
+                  </div>
+                  <br>
+                  <br>
 
                     <button type="submit" class="btn btn-primary " >Submit</button>
 
@@ -302,7 +313,7 @@
           </div>
         </div>
       </div>
-    <div id="signup-modal" class="modal">
+    <!--<div id="signup-modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
         <form class="form">
@@ -325,7 +336,7 @@
           </div>
           <button class="button3">Login</button>
         </form>
-      </div>
+      </div>-->
       <!-- Single Slider -->
       <div class="single-slider slider-height d-flex align-items-center">
         <div class="container">

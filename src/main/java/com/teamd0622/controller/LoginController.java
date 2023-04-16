@@ -20,7 +20,7 @@ public class LoginController {
     public String index(Model model, HttpServletRequest request) {
         UserDetails ud = (UserDetails) request.getSession().getAttribute("ud");
         model.addAttribute("ud", ud);
-        return "/index";
+        return "index";
     }
 
     @RequestMapping(value = {"/login"}, method = RequestMethod.GET)

@@ -17,7 +17,7 @@ public class RegisterController {
 
     @GetMapping("/register")
     public String registerPage(){
-        return "/register";
+        return "register";
     }
 
     //id 自动生成
@@ -26,11 +26,12 @@ public class RegisterController {
                            @RequestParam(name = "age")Integer age,
                            @RequestParam(name = "email")String email,
                            @RequestParam(name = "address")String address,
-                           @RequestParam(name = "password")String password,
+                           @RequestParam(name = "user_password")String password,
                            Model model, HttpServletRequest request){
         //register logic
         //if username existed, return ""username existed"" to thymeleaf 回显区域（在username input下面多一行提示）
-        if (userRegisterService.checkUsernameExist(username) == 1){
+        Integer check = userRegisterService.checkUsernameExist(username);
+        if (check != null){
             String pagecallback = (String) model.getAttribute("pagecallback");
             System.out.println(pagecallback);
             model.addAttribute("Username existed",pagecallback);

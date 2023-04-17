@@ -43,6 +43,7 @@ public class LoginController {
             UserDetails ud = userLoginService.getUserDetailsByUsername(username);
             model.addAttribute("ud", ud);
             request.getSession().setAttribute("ud", ud);
+            System.out.println(ud);
             return "redirect:/index";
         } else {
             return "/4xx";

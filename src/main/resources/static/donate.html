@@ -398,6 +398,43 @@
 .input_field[type=number] {
   -moz-appearance: textfield;
 }
+        /* alert的弹出窗样式 */
+        .alert {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .alert-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+        }
+        .alert-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .alert-button:hover {
+            background-color: #3e8e41;
+        }
     </style>
     <title>Donate</title>
 </head>
@@ -507,8 +544,31 @@
             </div>
             </div>
         </div>
-            <button class="purchase--btn">Checkout</button>
+           <!-- <button class="purchase&#45;&#45;btn" id="my_btn"><a th:href="@{/index}">Checkout</a></button>-->
+            <button class="purchase--btn" id="my_btn" onclick="myFunction()">Donate</button>
+            <div class="alert" id="myAlert">
+                <div class="alert-content">
+                    <p>Donate done, Thank you! :)</p>
+                    <button class="alert-button" onclick="closeAlert()">Go back.</button>
+                </div>
+            </div>
+            <a th:href="@{/index}">Back to main page.</a>
         </form>
         </div>
 </body>
+<script>
+    function myFunction() {
+        event.preventDefault();
+        // 获取弹出窗元素
+        var alertBox = document.getElementById("myAlert");
+        // 显示弹出窗
+        alertBox.style.display = "block";
+    }
+    function closeAlert() {
+        // 获取弹出窗元素
+        var alertBox = document.getElementById("myAlert");
+        // 隐藏弹出窗
+        alertBox.style.display = "none";
+    }
+</script>
 </html>

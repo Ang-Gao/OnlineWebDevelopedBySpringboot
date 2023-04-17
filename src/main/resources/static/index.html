@@ -70,7 +70,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt="" style="width: 150px"></a>
+                                    <a th:href="@{/index}"><img src="assets/img/logo/logo.png" alt="" style="width: 150px"></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -79,16 +79,16 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">                                                                                          
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="mnv.html">Mission & Vision</a></li>
-                                                <li><a href="faq.html">FAQs </a></li>
-                                                <li><a href="profile.html">Profile</a></li>
+                                                <li><a th:href="@{/index}">Home</a></li>
+                                                <li><a th:href="@{/mnv}">Mission & Vision</a></li>
+                                                <li><a th:href="@{/faq}">FAQs </a></li>
+                                                <li><a th:href="@{/profile}">Profile</a></li>
                                             </ul>
                                         </nav>
                                     </div>
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="donate.html" class="btn header-btn">Donate</a>
+                                        <a th:href="@{/donate}" class="btn header-btn">Donate</a>
                                     </div>
                                 </div>
                             </div> 
@@ -117,8 +117,8 @@
                                 <P data-animation="fadeInUp" data-delay=".8s" >DonateWeb is a non-profit organization that helps you donate to different programs transparently!</P>
                                 <!-- Hero-btn -->
                                 <div class="hero__btn">
-                                    <a href="contact.html" class="btn hero-btn mb-10"  data-animation="fadeInLeft" data-delay=".8s">Donate</a>
-                                    <a href="contact.html" class="cal-btn ml-15" data-animation="fadeInRight" data-delay="1.0s">
+                                    <a th:href="@{/donate}" class="btn hero-btn mb-10"  data-animation="fadeInLeft" data-delay=".8s">Donate</a>
+                                    <a th:href="@{/donate}" class="cal-btn ml-15" data-animation="fadeInRight" data-delay="1.0s">
                                         <i class="flaticon-null"></i>
                                         
                                     </a>
@@ -138,8 +138,8 @@
                                 <P data-animation="fadeInUp" data-delay=".8s" >DonateWeb is a non-profit organization that helps you donate to different programs transparently!</P>
                                 <!-- Hero-btn -->
                                 <div class="hero__btn">
-                                    <a href="contact.html" class="btn hero-btn mb-10"  data-animation="fadeInLeft" data-delay=".8s">Donate</a>
-                                    <a href="contact.html" class="cal-btn ml-15" data-animation="fadeInRight" data-delay="1.0s">
+                                    <a th:href="@{/donate}" class="btn hero-btn mb-10"  data-animation="fadeInLeft" data-delay=".8s">Donate</a>
+                                    <a th:href="@{/donate}" class="cal-btn ml-15" data-animation="fadeInRight" data-delay="1.0s">
                                         <i class="flaticon-null"></i>
                                         
                                     </a>
@@ -348,7 +348,7 @@
                                     <img src="assets/img/gallery/socialEvents1.png" alt="">
                                 </div>
                                 <div class="job-tittle">
-                                    <h4>Donation is Hope</h4>
+                                    <h4>Transform lives with giving.</h4>
                                     <ul>
                                         <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
                                         <li><i class="fas fa-sort-amount-down"></i>18.04.2023</li>
@@ -366,7 +366,7 @@
                                     <a href="#"><img src="assets/img/gallery/socialEvents2.png" alt=""></a>
                                 </div>
                                 <div class="job-tittle">
-                                    <h4>A hand for Children</h4>
+                                    <h4>Give a little, help a lot.</h4>
                                     <ul>
                                         <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
                                         <li><i class="fas fa-sort-amount-down"></i>18.04.2023</li>
@@ -384,7 +384,7 @@
                                     <a href="#"><img src="assets/img/gallery/socialEvents3.png" alt=""></a>
                                 </div>
                                 <div class="job-tittle">
-                                    <h4>Help for Children</h4>
+                                    <h4>Together we can give back.</h4>
                                     <ul>
                                         <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
                                         <li><i class="fas fa-sort-amount-down"></i>18.04.2023</li>
@@ -475,7 +475,7 @@
                                 <div class="single-footer-caption mb-30">
                                     <div class="footer-tittle">
                                         <div class="footer-logo mb-20">
-                                            <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                            <a th:href="@{/index}"><img src="assets/img/logo/logo.png" alt=""></a>
                                         </div>
                                     </div>
                                 </div>

@@ -37,7 +37,7 @@ public class RegisterController {
 
             String pagecallback = "Username existed";
             model.addAttribute("pagecallback",pagecallback);
-            return "/register";
+            return "register";
         }
         //success and judge input
         if(username == null || age == null || email == null || address == null || password == null){
@@ -46,7 +46,7 @@ public class RegisterController {
             String pagecallback = "You CANNOT register with EMPTY ROW(S)";
             model.addAttribute("pagecallback",pagecallback);
             //request.getSession().setAttribute("pagecallback", pagecallback);
-            return "/register";
+            return "register";
         }
         //id 处理问题
         UserDetails current_user = userRegisterService.createNewUserDetails(username,age,email,address,password);

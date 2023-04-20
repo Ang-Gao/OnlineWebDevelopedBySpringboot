@@ -25,7 +25,7 @@ public class LoginController {
 
     @RequestMapping(value = {"/login"}, method = RequestMethod.GET)
     public String loginIndex() {
-        return "/login";
+        return "login";
     }
 
     //username + password
@@ -46,7 +46,7 @@ public class LoginController {
             System.out.println(ud);
             return "redirect:/index";
         } else {
-            return "/4xx";
+            return "4xx";
         }
         
     }

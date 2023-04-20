@@ -31,3 +31,14 @@ plan:
 2 - 在profile想办法体现一下钱数？
 3 - 解决域名问题
 4 - 直接上线（没时间就不写CICD了）
+
+--
+解释视频 -- ·tom，按要求的技术zhan
+accessablity 视频，认真
+app demonstaartion 按表格
+S3 两ye page
+完成profile和其他更改
+faq mnv剔除拦截器
+niki要求的faq
+上线服务器，结合cicd（域名绑定）
+

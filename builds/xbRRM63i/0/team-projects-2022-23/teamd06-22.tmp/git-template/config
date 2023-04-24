@@ -1,6 +1,0 @@
-[init]
-	defaultBranch = none
-[fetch]
-	recurseSubmodules = false
-[http "https://git.cs.bham.ac.uk"]
-	sslCAInfo = /Users/jason/UOBD-Project/teamd06-22/builds/xbRRM63i/0/team-projects-2022-23/teamd06-22.tmp/CI_SERVER_TLS_CA_FILE

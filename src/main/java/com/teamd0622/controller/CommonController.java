@@ -31,6 +31,9 @@ public class CommonController {
     @GetMapping("/donate")
     public String donatePage(){return "donate";}
 
+    @GetMapping("/groups")
+    public String groupsPage(){return "groups";}
+
 
 
 }

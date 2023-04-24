@@ -41,4 +41,20 @@ S3 两ye page
 faq mnv剔除拦截器
 niki要求的faq
 上线服务器，结合cicd（域名绑定）
+What is the DonateWeb, and what is its mission?
+DonatWeb is a platform that connects donors with different charities in Dubai. Our mission is to promote charitable giving and make it easy for people to support causes they care about, as we are aware of the communication gap between charities and donors in Dubai and we aim to easen the communication and provide a simple yyet effective method of donation to all our users.
 
+How do I donate to a charity through the website?
+To donate, simply visit the website, select the charity you would like to support, and choose the donation amount. You can make a donation using a credit or debit card. You can start by registering to our website (link on this part) to create your account.
+
+
+Can I choose which charity my donation goes to?
+Yes, you can select the charity you would like to support from our list of participating organizations. We are partnered with a list of charities in different sectors, allowing a wider range of donation groups for you. You will be able to select your donation group and donating item during the process.
+
+What types of charities can I donate to through the website?
+We work with a wide range of charities, including those that support education, health, the environment, animal welfare, and more. A list of the charities we work with are provided here. (link to explore charities page)
+
+
+How do I know my donation is being used effectively?
+
+We work with charities that are transparent about their operations and how they use donations. Many charities provide regular updates on their activities and the impact they are making. Furthermore, through your profile page(add link to profile page), you will be able to track the journey of your donation the moment you have made the donation. You will be able to see where your donation has reached and who it has benefitted.

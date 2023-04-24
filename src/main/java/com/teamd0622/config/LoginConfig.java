@@ -21,6 +21,8 @@ public class LoginConfig implements WebMvcConfigurer {
                 //登录路径
                 "/login",
                 "/register",
+                "/faq",
+                "/mnv",
                 "/**/*.js",
                 "/**/*.jpg",
                 "/**/*.png",

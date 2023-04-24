@@ -221,19 +221,25 @@
           <!-- Logo -->
           <div class="col-xl-2 col-lg-2">
             <div class="logo">
-              <a href="index.html"><img src="assets/img/logo/logo.png" alt="" style="width: 150px"></a>
+              <a th:href="@{/index}"><img src="assets/img/logo/logo.png" alt="" style="width: 150px"></a>
             </div>
           </div>
+
           <div class="col-xl-10 col-lg-10">
             <div class="menu-wrapper  d-flex align-items-center justify-content-end">
               <!-- Main-menu -->
               <div class="main-menu d-none d-lg-block">
                 <nav>
+                  <ul id="navigation">
+                    <li><a th:href="@{/index}">Home</a></li>
+                    <li><a th:href="@{/mnv}">Mission & Vision</a></li>
+                    <li><a th:href="@{/faq}">FAQs </a></li>
+                  </ul>
                 </nav>
               </div>
               <!-- Header-btn -->
               <div class="header-right-btn d-none d-lg-block ml-20">
-                <button class="btn header-btn signup-btn">Login</button>
+                <a th:href="@{/login}" class="btn header-btn">Login</a>
               </div>
             </div>
           </div>

@@ -1,1 +1,2 @@
-<h2>Browse: http://donateweb.click/</h2>
+<h2>Use web Chrome/Safari to browse: </h2>
+</h3>http://donateweb.click/ </h3>

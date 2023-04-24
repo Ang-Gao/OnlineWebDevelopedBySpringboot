@@ -35,8 +35,8 @@ public class TestingUserDetailsCRUD {
 
     @PostMapping("/test/updateUserDetailsTesting")
     public String updateUserDetailsTesting(){
-        int msg = userDetailsMapper.updateUserDetails(createNewUserInfo());
-        System.out.println("UPDATE NEW DATA>>>" + msg);
+        //int msg = userDetailsMapper.updateUserDetails(createNewUserInfo());
+        //System.out.println("UPDATE NEW DATA>>>" + msg);
         return "\"UPDATE NEW DATA>>>\"";
     }
 

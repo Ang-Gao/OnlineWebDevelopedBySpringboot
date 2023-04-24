@@ -13,8 +13,10 @@ public class UserProfileServiceImpl implements UserProfileService {
 
     @Override
     public Integer updateUserProfile(UserDetails updateDetails) {
-        Integer retval = userDetailsMapper.updateUserDetails(updateDetails);
-        return retval;
+        Integer id = updateDetails.getId();
+        String username = updateDetails.getUsername();
+
+        return userDetailsMapper.updateUserDetails(updateDetails.getId(),updateDetails.getUsername(),updateDetails.getAge(),updateDetails.getEmail(),updateDetails.getAddress(),updateDetails.getUser_password());
     }
 
     @Override

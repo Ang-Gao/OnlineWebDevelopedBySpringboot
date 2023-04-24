@@ -83,7 +83,7 @@
                                                 <li><a th:href="@{/index}">Home</a></li>
                                                 <li><a th:href="@{/mnv}">Mission & Vision</a></li>
                                                 <li><a th:href="@{/faq}">FAQs </a></li>
-                                                <li><a th:href="@{/profile/1}">Profile</a></li>
+                                                <li><a th:href="@{/profile}">Profile</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -138,16 +138,16 @@
                                     <a class="d-inline-block" href="#">
                                         <h2 class="blog-head" style="color: #2d2d2d;">User Details</h2>
                                     </a>
-                                    <ul th:object="${user}">
-                                        <li><b>User ID: </b><span th:text="${user.id}"></span></li>
+                                    <ul th:object="${ud}">
+                                        <li><b>ID: </b><span th:text="${ud?.id}"></span></li>
                                         <br>
-                                        <li><b>Username: </b><span th:text="${user.username}"></span></li>
+                                        <li><b>Username: </b><span th:text="${ud?.username}"></span></li>
                                         <br>
-                                        <li><b>Your Age: </b><span th:text="${user.age}"></span></li>
+                                        <li><b>Your Age: </b><span th:text="${ud?.age}"></span></li>
                                         <br>
-                                        <li><b>Your Email: </b><span th:text="${user.email}"></span></li>
+                                        <li><b>Your Email: </b><span th:text="${ud?.email}"></span></li>
                                         <br>
-                                        <li><b>Your Address: </b><span th:text="${user.address}"></span></li>
+                                        <li><b>Your Address: </b><span th:text="${ud?.address}"></span></li>
                                     </ul>
                                 </div>
                             </article>
@@ -181,12 +181,12 @@
 
                                         <form th:action="@{/profile}" method="post" id="form">
                                             <b><i>Form cannot be empty</i></b>
+                                            <p th:text="${username_callback}"></p>
                                             <div class="form-group">
                                                 <!--th:for label点击指向对应名称的元素-->
                                                 <label th:for="id">ID</label>
-                                                <input type="text" class="form-control" th:id="id" name="id" th:value="${user.id}" readonly>
+                                                <input type="text" class="form-control" th:id="id" name="id" th:value="${ud?.id}" readonly>
                                             </div>
-                                            <p th:text="${username_callback}"></p>
                                             <div class="form-group">
                                                 <!--th:for label点击指向对应名称的元素-->
                                                 <label th:for="username">Username</label>
@@ -220,13 +220,8 @@
 
                                     </li>
                                     <li>
-                                        <a th:href="@{/mygroup}" class="d-flex">
+                                        <a th:href="@{/groups}" class="d-flex">
                                             <p>Check my Charity Group</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a th:href="@{/history}" class="d-flex">
-                                            <p>History</p>
                                         </a>
                                     </li>
                                     <li>

@@ -9,7 +9,7 @@ import java.util.List;
 @Mapper
 public interface UserDetailsMapper {
     int addUserDetails(UserDetails userDetails);
-    int updateUserDetails(UserDetails userDetails);
+    int updateUserDetails(Integer id,String username,Integer age,String email,String address,String user_password);
     int deleteUserDetailsById(Integer id);
     UserDetails getUserDetailsById(Integer id);
     List<UserDetails> getAllUsers();

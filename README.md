@@ -1,7 +1,1 @@
-Browse: http://donateweb.click/
-
-<h1>ATTENTION</h1>
-It is forbidden to submit content that has nothing to do with the code in this branch. (comment by Zeang Gao, 21:17 PM, 7 March 2023 (GST))
-
-<h1>VM settings</h1>
-Java -> 17.0.6
+<h2>Browse: http://donateweb.click/</h2>
